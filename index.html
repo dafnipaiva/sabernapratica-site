@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Saber na Prática - Treinamento com IA</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="bg-black text-white font-poppins">
+    <!-- Preloader -->
+    <div
+      id="preloader"
+      class="fixed inset-0 bg-black z-50 flex items-center justify-center"
+    >
+      <div class="loader">
+        <svg width="100" height="100" viewBox="0 0 100 100">
+          <circle class="loader-circle" cx="50" cy="50" r="40" />
+        </svg>
+      </div>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="fixed w-full z-40 transition-all duration-300" id="navbar">
+      <div
+        class="container mx-auto px-4 py-3 flex justify-between items-center"
+      >
+        <a href="#" class="flex items-center">
+          <img src="logo.png" alt="Saber na Prática" class="h-12 mr-3" />
+          <span class="text-white font-semibold text-lg">Saber na Prática</span>
+        </a>
+        <div class="hidden md:flex space-x-8">
+          <a href="#home" class="nav-link">Home</a>
+          <a href="#solucoes" class="nav-link">Soluções</a>
+          <a href="#metodologia" class="nav-link">Metodologia</a>
+          <a href="#diferenciais" class="nav-link">Diferenciais</a>
+          <a href="#aplicacoes" class="nav-link">Aplicações</a>
+          <a href="#missao" class="nav-link">Missão</a>
+          <a href="#contato" class="nav-link">Contato</a>
+        </div>
+        <button class="md:hidden hamburger focus:outline-none" id="menu-toggle">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+      <!-- Mobile Menu -->
+      <div
+        class="mobile-menu hidden md:hidden bg-black bg-opacity-95 w-full absolute top-full left-0 p-4 border-t border-gray-800"
+      >
+        <div class="flex flex-col space-y-4">
+          <a href="#home" class="nav-link">Home</a>
+          <a href="#solucoes" class="nav-link">Soluções</a>
+          <a href="#metodologia" class="nav-link">Metodologia</a>
+          <a href="#diferenciais" class="nav-link">Diferenciais</a>
+          <a href="#aplicacoes" class="nav-link">Aplicações</a>
+          <a href="#missao" class="nav-link">Missão</a>
+          <a href="#contato" class="nav-link">Contato</a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section
+      id="home"
+      class="min-h-screen flex items-center relative overflow-hidden"
+    >
+      <div class="absolute inset-0 z-0">
+        <div class="particles"></div>
+      </div>
+      <div class="container mx-auto px-4 z-10 py-20">
+        <div class="flex flex-col-reverse md:flex-row items-center">
+          <div class="md:w-1/2 mb-10 md:mb-0">
+            <h1 class="text-4xl md:text-5xl font-bold mb-6 gradient-text">
+              Treinamentos corporativos adaptativos, acessíveis e inteligentes
+              com IA
+            </h1>
+            <p class="text-base md:text-xl mb-8 text-gray-300">
+              Transformamos conteúdos complexos em jornadas de aprendizado
+              baseadas em microaprendizagem. Com entregas curtas, flexíveis e
+              inclusivas, via WhatsApp, outras aplicações de mensagem ou Web App
+            </p>
+            <div
+              class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4"
+            >
+              <a href="#contato" class="btn-primary">
+                Fale com nossa equipe
+                <i class="fas fa-arrow-right ml-2"></i>
+              </a>
+            </div>
+          </div>
+          <div class="w-full md:w-1/2 relative mb-12 mt-6 md:mb-0">
+            <div class="hero-image-container mx-auto w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl">
+
+              <div class="hero-glow"></div>
+              <img
+                src="hero-image.png"
+                alt="Treinamento com IA"
+                class="w-full h-auto rounded-xl shadow-xl"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce"
+      >
+        <a
+          href="#solucoes"
+          class="text-white opacity-70 hover:opacity-100 transition-opacity"
+        >
+          <i class="fas fa-chevron-down text-2xl"></i>
+        </a>
+      </div>
+    </section>
+
+    <!-- Soluções Section -->
+    <section id="solucoes" class="py-20 relative">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl md:text-5xl font-bold mb-4 gradient-text">
+            Nossas Soluções
+          </h2>
+          <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+            Desenvolvemos aplicativos e serviços integrados utilizando IA como
+            núcleo de inteligência para oferecer soluções inovadoras.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+          <!-- Saber Fácil -->
+          <div class="solution-card" data-aos="fade-up">
+            <div class="card-glow"></div>
+            <div class="p-8">
+              <div class="icon-container mb-6">
+                <i class="fas fa-bolt text-4xl"></i>
+              </div>
+              <h3 class="text-2xl font-bold mb-4">Saber Fácil</h3>
+              <p class="text-gray-300 mb-6">
+                Entrega de treinamentos curtos, práticos e acessíveis por
+                WhatsApp, outras aplicações de mensagem ou Web App
+              </p>
+              <div class="space-y-3">
+                <div class="flex items-start">
+                  <div
+                    class="flex-shrink-0 h-6 w-6 flex items-center justify-center rounded-full bg-gradient-to-r from-orange-500 to-yellow-500 mr-3"
+                  >
+                    <span class="text-xs font-bold">1</span>
+                  </div>
+                  <p class="text-sm text-gray-400">
+                    Baseado em microaprendizagem, com foco em absorção rápida e
+                    aplicabilidade imediata
+                  </p>
+                </div>
+                <div class="flex items-start">
+                  <div
+                    class="flex-shrink-0 h-6 w-6 flex items-center justify-center rounded-full bg-gradient-to-r from-orange-500 to-yellow-500 mr-3"
+                  >
+                    <span class="text-xs font-bold">2</span>
+                  </div>
+                  <p class="text-sm text-gray-400">
+                    Utiliza diversos formatos como texto, áudio, vídeo, PDF e
+                    mapas mentais
+                  </p>
+                </div>
+                <div class="flex items-start">
+                  <div
+                    class="flex-shrink-0 h-6 w-6 flex items-center justify-center rounded-full bg-gradient-to-r from-orange-500 to-yellow-500 mr-3"
+                  >
+                    <span class="text-xs font-bold">3</span>
+                  </div>
+                  <p class="text-sm text-gray-400">
+                    Ideal para aumentar a adesão dos colaboradores e eliminar
+                    barreiras técnicas de acesso
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Saber Tutor -->
+          <div class="solution-card" data-aos="fade-up" data-aos-delay="100">
+            <div class="card-glow"></div>
+            <div class="p-8">
+              <div class="icon-container mb-6">
+                <i class="fas fa-robot text-4xl"></i>
+              </div>
+              <h3 class="text-2xl font-bold mb-4">Saber Tutor</h3>
+              <p class="text-gray-300 mb-6">
+                Mentoria virtual com inteligência artificial treinada com os
+                conteúdos da própria empresa
+              </p>
+              <div class="space-y-3">
+                <div class="flex items-start">
+                  <div
+                    class="flex-shrink-0 h-6 w-6 flex items-center justify-center rounded-full bg-gradient-to-r from-orange-500 to-yellow-500 mr-3"
+                  >
+                    <span class="text-xs font-bold">1</span>
+                  </div>
+                  <p class="text-sm text-gray-400">
+                    Tira dúvidas em tempo real com linguagem clara, acessível e
+                    personalizada
+                  </p>
+                </div>
+                <div class="flex items-start">
+                  <div
+                    class="flex-shrink-0 h-6 w-6 flex items-center justify-center rounded-full bg-gradient-to-r from-orange-500 to-yellow-500 mr-3"
+                  >
+                    <span class="text-xs font-bold">2</span>
+                  </div>
+                  <p class="text-sm text-gray-400">
+                    Adapta as respostas ao perfil do colaborador, favorecendo
+                    retenção e aprendizado contínuo
+                  </p>
+                </div>
+                <div class="flex items-start">
+                  <div
+                    class="flex-shrink-0 h-6 w-6 flex items-center justify-center rounded-full bg-gradient-to-r from-orange-500 to-yellow-500 mr-3"
+                  >
+                    <span class="text-xs font-bold">3</span>
+                  </div>
+                  <p class="text-sm text-gray-400">
+                    Oferece suporte ativo por mensagens, integrando
+                    microaprendizagem e orientação prática
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Metodologia Section -->
+    <section id="metodologia" class="py-20 relative bg-gradient-radial">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl md:text-5xl font-bold mb-4 gradient-text">
+            Metodologia Saber Modular
+          </h2>
+          <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+            Uma metodologia educacional adaptativa e inclusiva que organiza os
+            conteúdos em microblocos de aprendizado com checkpoints inteligentes
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-10 mb-12">
+          <div class="solution-card" data-aos="fade-up">
+            <div class="card-glow"></div>
+            <div class="p-8">
+              <div class="icon-container mb-6">
+                <i class="fas fa-cogs text-4xl"></i>
+              </div>
+              <h3 class="text-2xl font-bold mb-4">Como funciona?</h3>
+              <div class="space-y-3">
+                <div class="flex items-start">
+                  <div
+                    class="flex-shrink-0 h-6 w-6 flex items-center justify-center rounded-full bg-gradient-to-r from-orange-500 to-yellow-500 mr-3"
+                  >
+                    <span class="text-xs font-bold">1</span>
+                  </div>
+                  <p class="text-sm text-gray-400">
+                    A cada etapa, o sistema verifica a compreensão antes de
+                    liberar o próximo conteúdo
+                  </p>
+                </div>
+                <div class="flex items-start">
+                  <div
+                    class="flex-shrink-0 h-6 w-6 flex items-center justify-center rounded-full bg-gradient-to-r from-orange-500 to-yellow-500 mr-3"
+                  >
+                    <span class="text-xs font-bold">2</span>
+                  </div>
+                  <p class="text-sm text-gray-400">
+                    O conteúdo é ajustado em tempo real de acordo com as
+                    respostas e perfil do usuário
+                  </p>
+                </div>
+                <div class="flex items-start">
+                  <div
+                    class="flex-shrink-0 h-6 w-6 flex items-center justify-center rounded-full bg-gradient-to-r from-orange-500 to-yellow-500 mr-3"
+                  >
+                    <span class="text-xs font-bold">3</span>
+                  </div>
+                  <p class="text-sm text-gray-400">
+                    Garante ritmo individualizado, foco no essencial e
+                    acessibilidade plena
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="solution-card" data-aos="fade-up" data-aos-delay="100">
+            <div class="card-glow"></div>
+            <div class="p-8">
+              <div class="icon-container mb-6">
+                <i class="fas fa-chart-line text-4xl"></i>
+              </div>
+              <h3 class="text-2xl font-bold mb-4">Benefícios</h3>
+              <div class="space-y-3">
+                <div class="flex items-start">
+                  <div
+                    class="flex-shrink-0 h-6 w-6 flex items-center justify-center rounded-full bg-gradient-to-r from-orange-500 to-yellow-500 mr-3"
+                  >
+                    <span class="text-xs font-bold">1</span>
+                  </div>
+                  <p class="text-sm text-gray-400">
+                    Favorece o aprendizado com base em microaprendizagem
+                  </p>
+                </div>
+                <div class="flex items-start">
+                  <div
+                    class="flex-shrink-0 h-6 w-6 flex items-center justify-center rounded-full bg-gradient-to-r from-orange-500 to-yellow-500 mr-3"
+                  >
+                    <span class="text-xs font-bold">2</span>
+                  </div>
+                  <p class="text-sm text-gray-400">
+                    Evita sobrecarga de informação e estimula a continuidade
+                  </p>
+                </div>
+                <div class="flex items-start">
+                  <div
+                    class="flex-shrink-0 h-6 w-6 flex items-center justify-center rounded-full bg-gradient-to-r from-orange-500 to-yellow-500 mr-3"
+                  >
+                    <span class="text-xs font-bold">3</span>
+                  </div>
+                  <p class="text-sm text-gray-400">
+                    Favorece a inclusão, com acessibilidade para pessoas com
+                    diferentes deficiências e estilos de aprendizagem
+                  </p>
+                </div>
+                <div class="flex items-start">
+                  <div
+                    class="flex-shrink-0 h-6 w-6 flex items-center justify-center rounded-full bg-gradient-to-r from-orange-500 to-yellow-500 mr-3"
+                  >
+                    <span class="text-xs font-bold">4</span>
+                  </div>
+                  <p class="text-sm text-gray-400">
+                    Fortalece a memorização e a aplicação prática do conteúdo
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Diferenciais Section -->
+    <section id="diferenciais" class="py-20 relative">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl md:text-5xl font-bold mb-4 gradient-text">
+            Nossos Diferenciais
+          </h2>
+          <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+            O que torna a Saber na Prática uma solução única no mercado de
+            treinamento e desenvolvimento.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div class="diferencial-card" data-aos="zoom-in">
+            <div class="card-glow"></div>
+            <div class="p-6">
+              <div class="icon-container mb-4">
+                <i class="fas fa-mobile-alt text-3xl"></i>
+              </div>
+              <h3 class="text-xl font-bold mb-3">
+                Acessibilidade Multiplataforma
+              </h3>
+              <p class="text-gray-400">
+                Plataforma acessível por WhatsApp, outras aplicações de mensagem
+                e Web App
+              </p>
+            </div>
+          </div>
+
+          <div class="diferencial-card" data-aos="zoom-in" data-aos-delay="100">
+            <div class="card-glow"></div>
+            <div class="p-6">
+              <div class="icon-container mb-4">
+                <i class="fas fa-brain text-3xl"></i>
+              </div>
+              <h3 class="text-xl font-bold mb-3">IA Personalizada</h3>
+              <p class="text-gray-400">
+                IA treinada com o conteúdo da empresa e checkpoints inteligentes
+                que validam o progresso
+              </p>
+            </div>
+          </div>
+
+          <div class="diferencial-card" data-aos="zoom-in" data-aos-delay="200">
+            <div class="card-glow"></div>
+            <div class="p-6">
+              <div class="icon-container mb-4">
+                <i class="fas fa-universal-access text-3xl"></i>
+              </div>
+              <h3 class="text-xl font-bold mb-3">Inclusão e Acessibilidade</h3>
+              <p class="text-gray-400">
+                Favorece a inclusão, com acessibilidade para pessoas com
+                diferentes deficiências e estilos de aprendizagem
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Aplicações Section -->
+    <section id="aplicacoes" class="py-20 relative bg-gradient-radial">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl md:text-5xl font-bold mb-4 gradient-text">
+            Aplicações
+          </h2>
+          <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+            Nossas soluções são versáteis e podem ser aplicadas em diversos
+            contextos corporativos
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div class="diferencial-card" data-aos="zoom-in">
+            <div class="card-glow"></div>
+            <div class="p-6">
+              <div class="icon-container mb-4">
+                <i class="fas fa-graduation-cap text-3xl"></i>
+              </div>
+              <h3 class="text-xl font-bold mb-3">Treinamentos Corporativos</h3>
+              <p class="text-gray-400">
+                Treinamentos em diferentes áreas e níveis, capacitação contínua
+                baseada em microaprendizagem
+              </p>
+            </div>
+          </div>
+
+          <div class="diferencial-card" data-aos="zoom-in" data-aos-delay="100">
+            <div class="card-glow"></div>
+            <div class="p-6">
+              <div class="icon-container mb-4">
+                <i class="fas fa-clipboard-check text-3xl"></i>
+              </div>
+              <h3 class="text-xl font-bold mb-3">Compliance e Normas</h3>
+              <p class="text-gray-400">
+                Normas internas e compliance, simulações práticas e conteúdos
+                obrigatórios
+              </p>
+            </div>
+          </div>
+
+          <div class="diferencial-card" data-aos="zoom-in" data-aos-delay="200">
+            <div class="card-glow"></div>
+            <div class="p-6">
+              <div class="icon-container mb-4">
+                <i class="fas fa-users text-3xl"></i>
+              </div>
+              <h3 class="text-xl font-bold mb-3">
+                Onboarding e Times Híbridos
+              </h3>
+              <p class="text-gray-400">
+                Onboarding inteligente e interativo, treinamentos para times
+                híbridos ou distribuídos
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Missão, Visão e Valores Section -->
+    <section id="missao" class="py-20 relative">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl md:text-5xl font-bold mb-4 gradient-text">
+            Missão, Visão e Valores
+          </h2>
+          <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+            Os princípios que guiam nossa atuação e nosso compromisso com a
+            educação corporativa
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+          <div class="solution-card" data-aos="fade-up">
+            <div class="card-glow"></div>
+            <div class="p-8">
+              <div class="icon-container mb-6">
+                <i class="fas fa-bullseye text-4xl"></i>
+              </div>
+              <h3 class="text-2xl font-bold mb-4">Missão</h3>
+              <p class="text-gray-300">
+                Desenvolver soluções educacionais práticas e inteligentes que
+                conectem empresas e pessoas ao conhecimento de forma acessível,
+                contínua e personalizada
+              </p>
+            </div>
+          </div>
+
+          <div class="solution-card" data-aos="fade-up" data-aos-delay="100">
+            <div class="card-glow"></div>
+            <div class="p-8">
+              <div class="icon-container mb-6">
+                <i class="fas fa-eye text-4xl"></i>
+              </div>
+              <h3 class="text-2xl font-bold mb-4">Visão</h3>
+              <p class="text-gray-300">
+                Ser reconhecida no Brasil até 2030 como a principal plataforma
+                de educação corporativa com IA, transformando treinamentos
+                tradicionais em experiências acessíveis, escaláveis e relevantes
+              </p>
+            </div>
+          </div>
+
+          <div class="solution-card" data-aos="fade-up" data-aos-delay="200">
+            <div class="card-glow"></div>
+            <div class="p-8">
+              <div class="icon-container mb-6">
+                <i class="fas fa-heart text-4xl"></i>
+              </div>
+              <h3 class="text-2xl font-bold mb-4">Valores</h3>
+              <ul class="text-gray-300 space-y-2">
+                <li>• Acessibilidade</li>
+                <li>• Inovação com propósito</li>
+                <li>• Autonomia do usuário</li>
+                <li>• Personalização da jornada</li>
+                <li>• Aplicabilidade do conteúdo</li>
+                <li>• Compromisso com resultados mensuráveis</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contato Section -->
+    <section id="contato" class="py-20 relative">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl md:text-5xl font-bold mb-4 gradient-text">
+            Fale Conosco
+          </h2>
+          <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+            Estamos prontos para transformar o treinamento da sua empresa com
+            soluções de IA personalizadas.
+          </p>
+        </div>
+
+        <div class="flex justify-center">
+          <div
+            class="contact-info p-8 rounded-xl bg-gray-900 bg-opacity-50 backdrop-filter backdrop-blur-lg border border-gray-800"
+            data-aos="fade-right"
+          >
+            <h3 class="text-2xl font-bold mb-6">Informações de Contato</h3>
+
+            <div class="space-y-6">
+              <div class="flex items-start">
+                <div
+                  class="flex-shrink-0 h-10 w-10 flex items-center justify-center rounded-full bg-gradient-to-r from-orange-500 to-yellow-500 mr-4"
+                >
+                  <i class="fas fa-envelope text-white"></i>
+                </div>
+                <div>
+                  <h4 class="text-lg font-semibold mb-1">Email</h4>
+                  <a
+                    href="mailto:atendimento@sabernapratica.com.br"
+                    class="text-gray-300 hover:text-white transition-colors"
+                    >atendimento@sabernapratica.com.br</a
+                  >
+                </div>
+              </div>
+
+              <div class="flex items-start">
+                <div
+                  class="flex-shrink-0 h-10 w-10 flex items-center justify-center rounded-full bg-gradient-to-r from-orange-500 to-yellow-500 mr-4"
+                >
+                  <i class="fab fa-instagram text-white"></i>
+                </div>
+                <div>
+                  <h4 class="text-lg font-semibold mb-1">Instagram</h4>
+                  <a
+                    href="https://instagram.com/sabernapraticaoficial"
+                    target="_blank"
+                    class="text-gray-300 hover:text-white transition-colors"
+                    >@sabernapraticaoficial</a
+                  >
+                </div>
+              </div>
+
+              <div class="flex items-start">
+                <div
+                  class="flex-shrink-0 h-10 w-10 flex items-center justify-center rounded-full bg-gradient-to-r from-orange-500 to-yellow-500 mr-4"
+                >
+                  <i class="fas fa-file-alt text-white"></i>
+                </div>
+                <div>
+                  <h4 class="text-lg font-semibold mb-1">Formulário</h4>
+                  <a
+                    href="https://forms.gle/jcCnvgh9QWKsZEbWA"
+                    target="_blank"
+                    class="text-gray-300 hover:text-white transition-colors"
+                    >Preencha nosso formulário de contato</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-10 border-t border-gray-800">
+      <div class="container mx-auto px-4">
+        <div class="flex flex-col md:flex-row justify-between items-center">
+          <div class="mb-6 md:mb-0">
+            <img src="logo.png" alt="Saber na Prática" class="h-10 mb-4" />
+            <p class="text-gray-400 text-sm">
+              Treinamento prático, personalizado e escalável com IA, ao alcance
+              de qualquer empresa.
+            </p>
+          </div>
+
+          <div class="flex flex-col items-center md:items-end">
+            <div class="flex space-x-4 mb-4">
+              <a
+                href="https://instagram.com/sabernapraticaoficial"
+                target="_blank"
+                class="social-icon"
+              >
+                <i class="fab fa-instagram"></i>
+              </a>
+              <a
+                href="mailto:atendimento@sabernapratica.com.br"
+                class="social-icon"
+              >
+                <i class="fas fa-envelope"></i>
+              </a>
+              <a
+                href="https://forms.gle/jcCnvgh9QWKsZEbWA"
+                target="_blank"
+                class="social-icon"
+              >
+                <i class="fas fa-file-alt"></i>
+              </a>
+            </div>
+            <p class="text-gray-500 text-sm">
+              &copy; 2025 Saber na Prática. Todos os direitos reservados.
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button
+      id="backToTop"
+      class="fixed bottom-6 right-6 h-12 w-12 rounded-full bg-gradient-to-r from-orange-500 to-yellow-500 text-white flex items-center justify-center shadow-lg transform scale-0 transition-transform duration-300"
+    >
+      <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Success Modal -->
+    <div
+      id="successModal"
+      class="fixed inset-0 flex items-center justify-center z-50 hidden"
+    >
+      <div
+        class="modal-backdrop absolute inset-0 bg-black bg-opacity-70 backdrop-filter backdrop-blur-sm"
+      ></div>
+      <div
+        class="modal-content bg-gray-900 rounded-xl p-8 max-w-md w-full mx-4 relative z-10 border border-gray-800"
+      >
+        <div class="text-center">
+          <div class="success-icon mb-6">
+            <i class="fas fa-check-circle text-5xl text-green-500"></i>
+          </div>
+          <h3 class="text-2xl font-bold mb-2">Mensagem Enviada!</h3>
+          <p class="text-gray-300 mb-6">
+            Agradecemos seu contato. Nossa equipe retornará em breve.
+          </p>
+          <button class="btn-primary w-full close-modal">Fechar</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
